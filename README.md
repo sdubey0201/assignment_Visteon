@@ -20,9 +20,13 @@ we are referring the same images in docker compose file
 ## 5) login to mongo db container 
 
 docker exec -it <container-name> ./bin/bash
+    
 db name for auth: usersAuthdb
+    
 use <db-name>
+    
 db.usermodels.insert({"userName":"test", "password":"test"}).
+    
 
 ## 6) call login end point to create token for the existing user in auht MS
 curl --location --request POST 'http://localhost:3000/login' \
