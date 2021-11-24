@@ -23,7 +23,7 @@ docker exec -it <container-name> ./bin/bash
     
 db name for auth: usersAuthdb
     
-use <db-name>
+use usersAuthdb
     
 db.usermodels.insert({"userName":"test", "password":"test"}).
     
