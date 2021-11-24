@@ -6,18 +6,19 @@
 docker build . -t user-ms/node_app
 
 
-2) build auth Ms docker image 
+## 2) build auth Ms docker image 
+
 docker build . -t auth-ms/node-app
 
 
-3) for mongo db we are using existing docker image from docker hub registory.
-
-
+## 3) for mongo db we are using existing docker image from docker hub registory.
 we are referring the same images in docker compose file 
-4) docker-compose up
+
+## 4) docker-compose up
 
 
-5) login to mongo db container 
+## 5) login to mongo db container 
+
 docker exec -it <container-name> ./bin/bash
 db name for auth: usersAuthdb
 use <db-name>
