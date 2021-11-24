@@ -1,0 +1,28 @@
+version: "3"
+services:
+       user-app:
+           container_name: user-ms-node_app
+           image: user-ms/node_app
+           restart: always
+           build: .
+           ports:
+             - "3001:3001"
+           links:
+             - mongo
+             - login-app
+       login-app:
+           container_name: auth-ms-node-app
+           image: auth-ms/node-app
+           restart: always
+           build: .
+           ports:
+             - "3000:3000"
+           links:
+             - mongo
+       mongo:
+             container_name: my-mongodb
+             image: mongo
+             volumes:
+               - /mongodbData:/data/db
+             ports:
+               - '27017:27017'
