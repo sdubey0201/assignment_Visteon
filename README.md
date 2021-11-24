@@ -19,7 +19,7 @@ we are referring the same images in docker compose file
 
 ## 5) login to mongo db container 
 
-docker exec -it <container-name> ./bin/bash
+docker exec -it container-name ./bin/bash
     
 db name for auth: usersAuthdb
     
